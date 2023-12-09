@@ -1,0 +1,150 @@
+<!-- tags_example.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django Template Tags Example</title>
+</head>
+<body>
+
+  <h1>Django Template Примеры тегов</h1>
+
+  <b>{ load }</b>
+  <p>
+     <b>{ load }</b> Тег используется для загрузки тегов и фильтров шаблона
+    Syntax: <b>{load some_library }</b>
+  </p>
+
+  <b>{ templatetag }</b>
+  <p>
+     <b>{ templatetag }</b> тег используется для вывода символов, используемых для разделения тегов и переменных
+    Syntax: <b>{ templatetag openvariable }</b>, <b>{ templatetag closevariable }</b>
+  </p>
+
+  <b>{ include }</b>
+  <p>
+    The <b>{ include }</b> тег используется для включения содержимого другого шаблона
+    Syntax: <b>{ include 'another_template.html' }</b>
+  </p>
+
+  <h2>{ extends }</h2>
+  <p>
+    The <b>{ extends }</b> Тег используется для расширения базового шаблона
+    Syntax: <b>{ extends 'base_template.html' }</b>
+  </p>
+
+  <h2>{ comment }</h2>
+  <p>
+    The <b>{ comment }</b> тег используется для добавления комментариев в шаблонах
+    Syntax: <b>{ comment "This is a comment" } ... { endcomment }</b>
+  </p>
+
+  <h2>{ resetcycle }</h2>
+  <p>
+    The <b>{ resetcycle }</b> tag is used to reset the cycle tag state.
+    Syntax: <b>{ resetcycle variable_name }</b>
+  </p>
+
+  <h2>{ widthratio }</h2>
+  <p>
+    The <b>{ widthratio }</b> тег используется для сброса состояния тега цикла
+    Syntax: <b>{ widthratio value max_value max_width }</b>
+  </p>
+
+  <h2>{ regroup }</h2>
+  <p>
+    The <b>{ regroup }</b> Тег используется для группировки списка похожих объектов по общему атрибуту.
+    Syntax: <b>{ regroup list by attribute as grouped_list }</b>
+  </p>
+
+
+
+
+
+
+<h1>Django Template примеры фильтров</h1>
+
+  <h2>{{ some_variable|date:"D d M Y" }}</h2>
+  <p>
+    The <code>|date</code> Фильтр используется для форматирования даты
+  </p>
+
+  <h2>{{ some_list|slice:":2" }}</h2>
+  <p>
+    The <code>|slice</code> Фильтр используется для разрезания списка
+
+  </p>
+
+  <h2>{{ some_text|lower }}</h2>
+  <p>
+    The <code>|lower</code> фильтр используется для преобразования текста в нижний регистр
+  </p>
+
+  <h2>{{ some_text|cut:"substring" }}</h2>
+  <p>
+    The <code>|cut</code> Фильтр используется для удаления указанной подстроки из строки
+  </p>
+
+  <h2>{{ some_text|linebreaksbr }}</h2>
+  <p>
+    The <code>|linebreaksbr</code> фильтр используется для преобразования разрывов строк в разрывы строк HTML
+  </p>
+
+  <h2>{{ some_text|length_is:"10" }}</h2>
+  <p>
+    The <code>|length_is</code> Фильтр используется для проверки того, равна ли длина строки указанному значению
+  </p>
+
+  <h2>{{ some_text|upper }}</h2>
+  <p>
+    The <code>|upper</code> фильтр используется для преобразования текста в верхний регистр
+  </p>
+
+  <h2>{{ some_variable|add:5 }}</h2>
+  <p>
+    The <code>|add</code> Фильтр используется для добавления значения к переменной
+  </p>
+
+  <h2>{{ some_text|rjust:"10" }}</h2>
+  <p>
+    The <code>|rjust</code> фильтр используется для выравнивания строки по правому краю в поле заданной ширины
+  </p>
+
+  <h2>{{ some_time|time:"H:i" }}</h2>
+  <p>
+    The <code>|time</code> фильтр используется для форматирования времени
+  </p>
+
+  <h2>{{ some_html|safe }}</h2>
+  <p>
+    The <code>|safe</code> фильтр используется для пометки строки как безопасной для вывода HTML
+  </p>
+
+  <h2>{{ some_float|floatformat:"2" }}</h2>
+  <p>
+    The <code>|floatformat</code> фильтр используется для форматирования числа с float числом
+  </p>
+
+  <h2>{{ some_text|wordcount }}</h2>
+  <p>
+    The <code>|wordcount</code> фильтр используется для подсчета количества слов в строке
+  </p>
+
+  <h2>{{ some_text|slugify }}</h2>
+  <p>
+    The <code>|slugify</code> Фильтр используется для преобразования строки в URL-адрес
+  </p>
+
+  <h2>{{ some_text|urlize }}</h2>
+  <p>
+    The <code>|urlize</code> фильтр используется для преобразования URL-адресов в тексте в кликабельные ссылки
+  </p>
+
+  <h2>{{ some_text|truncatechars:"50" }}</h2>
+  <p>
+    The <code>|truncatechars</code> фильтр используется для усечения строки до указанного количества символов
+  </p>
+</body>
+</html>
